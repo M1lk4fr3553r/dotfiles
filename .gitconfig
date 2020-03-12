@@ -1,0 +1,8 @@
+[user]
+	email = m1lk4fr3553r@outlook.de
+	name = Tobias Birth
+	signingkey = 9CE38731CDFBBA7FF9D70F7DA04D77219200358D
+[core]
+	editor = \"C:\\Program Files\\VSCodium\\VSCodium.exe\" --wait
+[commit]
+	gpgsign = true
