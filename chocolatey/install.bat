@@ -45,3 +45,4 @@ choco install -y git-fork
 choco install -y toggl
 choco install -y 7zip
 choco install -y procexp
+choco install -y itunes
