@@ -49,3 +49,4 @@ choco install -y itunes
 choco install -y pia
 choco install -y jdownloader
 choco install -y cyberduck
+choco install -y vlc
