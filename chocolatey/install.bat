@@ -46,3 +46,4 @@ choco install -y toggl
 choco install -y 7zip
 choco install -y procexp
 choco install -y itunes
+choco install -y pia
