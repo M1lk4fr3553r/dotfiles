@@ -51,3 +51,4 @@ choco install -y jdownloader
 choco install -y cyberduck
 choco install -y vlc
 choco install -y greenshot
+choco install -y arduino
