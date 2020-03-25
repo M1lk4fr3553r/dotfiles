@@ -1,9 +1,3 @@
-This script does the trick! Just paste it into the top of your bat file. If you want to review the output of your script, add a "pause" command at the bottom of your batch file.
-
-UPDATE: This script is now slightly edited to support command line arguments and a 64 bit OS.
-
-Thank you Eneerge @ https://sites.google.com/site/eneerge/scripts/batchgotadmin
-
 @echo off
 
 :: BatchGotAdmin
