@@ -47,3 +47,4 @@ choco install -y vlc
 choco install -y greenshot
 choco install -y arduino
 choco install -y autodesk-fusion360
+choco install -y zotero
