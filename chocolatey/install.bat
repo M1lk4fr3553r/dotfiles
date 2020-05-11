@@ -35,7 +35,7 @@ choco install -y vscodium --params "/AssociateWithFiles"
 choco install -y git.install --params "/GitAndUnixToolsOnPath /NoGitLfs"
 choco install -y adoptopenjdk12
 choco install -y intellijidea-ultimate
-choco install -y git-fork
+choco install -y gitkraken
 choco install -y toggl
 choco install -y 7zip
 choco install -y procexp
