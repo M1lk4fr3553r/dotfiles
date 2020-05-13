@@ -29,7 +29,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------  
 choco install -y cmder
-choco install -y 1password
+choco install -y 1password -f -not-silent
 choco install -y brave
 choco install -y vscodium --params "/AssociateWithFiles"
 choco install -y git.install --params "/GitAndUnixToolsOnPath /NoGitLfs"
@@ -42,7 +42,7 @@ choco install -y procexp
 choco install -y itunes
 choco install -y pia
 choco install -y jdownloader
-choco install -y cyberduck
+choco install -y filezilla
 choco install -y vlc
 choco install -y greenshot
 choco install -y arduino
