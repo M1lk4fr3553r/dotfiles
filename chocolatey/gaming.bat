@@ -39,4 +39,5 @@ choco install -y discord
 choco install -y origin
 choco install -y uplay
 choco install -y goggalaxy
+choco install -y epicgameslauncher
 choco install -y geforce-experience
