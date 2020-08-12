@@ -28,20 +28,18 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------  
-choco install -y cmder
+choco install -y gpg4win
+choco install -y microsoft-windows-terminal
 choco install -y 1password -f -not-silent
 choco install -y brave
 choco install -y vscodium --params "/AssociateWithFiles"
-choco install -y git.install --params "/GitAndUnixToolsOnPath /NoGitLfs"
 choco install -y adoptopenjdk12
 choco install -y intellijidea-ultimate
 choco install -y gitkraken
 choco install -y toggl
 choco install -y 7zip
-choco install -y procexp
 choco install -y itunes
 choco install -y pia
-choco install -y jdownloader
 choco install -y filezilla
 choco install -y vlc
 choco install -y greenshot
