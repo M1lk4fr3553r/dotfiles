@@ -1,0 +1,12 @@
+[user]
+	email = m1lk4fr3553r@outlook.de
+	name = Tobias Birth
+	signingKey = 85F6B41E6EFE2A8BFAA54CEAA0E4B5EC65575C60
+[core]
+	longpaths = true
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
