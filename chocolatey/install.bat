@@ -29,6 +29,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------  
 choco install -y gpg4win
+choco install -y cygwin
 choco install -y microsoft-windows-terminal
 choco install -y 1password -f -not-silent
 choco install -y brave
