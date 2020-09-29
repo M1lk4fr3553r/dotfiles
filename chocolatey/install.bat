@@ -48,3 +48,4 @@ choco install -y arduino
 choco install -y autodesk-fusion360
 choco install -y zotero
 choco install -y prusaslicer
+choco install -y charles4
