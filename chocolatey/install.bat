@@ -50,3 +50,4 @@ choco install -y zotero
 choco install -y prusaslicer
 choco install -y charles4
 choco install -y lepton
+choco install -y zoomit
