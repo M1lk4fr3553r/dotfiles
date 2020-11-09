@@ -65,7 +65,7 @@
             {
                 "guid" : "{07ece1cb-ff14-4179-a738-1781081fd8be}",
                 "closeOnExit" : true,
-                "commandline" : "C:/tools/cygwin/bin/zsh.exe",
+                "commandline" : "C:/cygwin64/bin/zsh.exe",
                 "historySize" : 9001,
                 "icon" : "C:/tools/cygwin/Cygwin-Terminal.ico",
                 "name" : "Cygwin",
