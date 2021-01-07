@@ -32,7 +32,7 @@ choco install -y gpg4win
 choco install -y cygwin
 choco install -y microsoft-windows-terminal
 choco install -y 1password -f -not-silent
-choco install -y vivaldi
+choco install -y brave
 choco install -y vscodium --params "/AssociateWithFiles"
 choco install -y adoptopenjdk12
 choco install -y intellijidea-ultimate
