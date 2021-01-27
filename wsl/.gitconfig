@@ -1,0 +1,8 @@
+[alias]
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30 --graph
+  all = "!find . -type d -name .git -prune -execdir pwd ';' -execdir git $@ ';' #"
+  undo = reset HEAD~1 --mixed
+[user]
+	name = Tobias Birth
+	email = t.birth@serrala.com

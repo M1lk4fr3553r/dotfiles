@@ -6,7 +6,7 @@
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
     // If enabled, selections are automatically copied to your clipboard.
@@ -21,7 +21,8 @@
         "defaults": {
             // Put settings here that you want to apply to all profiles.
             "fontFace": "MesloLGS NF",
-            "colorScheme": "Monokai Seti Dark"
+            "colorScheme": "Vintage",
+            "fontSize": 13
         },
         "list": [
             {
@@ -56,7 +57,7 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-		        "hidden": true,
+		"hidden": true,
                 "guid" : "{07ece1cb-ff14-4179-a738-1781081fd8be}",
                 "closeOnExit" : true,
                 "commandline" : "C:/cygwin64/bin/zsh.exe",
@@ -69,6 +70,14 @@
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "name": "Ubuntu-20.04",
+                "backgroundImage": "ms-appdata:///local/au-os-L.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageStretchMode": "none",
+                "colorScheme": "Aurelia",
+                "useAcrylic": false,
+                "acrylicOpacity": 0.5,
+                "experimental.retroTerminalEffect": false,
+                "backgroundImageOpacity": 0.5,
                 "source": "Windows.Terminal.Wsl"
             }
         ]
@@ -77,67 +86,25 @@
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
         {
-            "name": "Monokai Night",
-            "background": "#1f1f1f",
-            "foreground": "#f8f8f8",
-            "black": "#1f1f1f",
-            "blue": "#6699df",
-            "cyan": "#e69f66",
-            "green": "#a6e22e",
-            "purple": "#ae81ff",
-            "red": "#f92672",
-            "white": "#f8f8f2",
-            "yellow": "#e6db74",
-            "brightBlack": "#75715e",
-            "brightBlue": "#66d9ef",
-            "brightCyan": "#e69f66",
-            "brightGreen": "#a6e22e",
-            "brightPurple": "#ae81ff",
-            "brightRed": "#f92672",
-            "brightWhite": "#f8f8f2",
-            "brightYellow": "#e6db74"
-        },
-        {
-            "background": "#011627",
-            "black": "#011627",
-            "blue": "#82AAFF",
-            "brightBlack": "#575656",
-            "brightBlue": "#82AAFF",
-            "brightCyan": "#7FDBCA",
-            "brightGreen": "#22DA6E",
-            "brightPurple": "#C792EA",
-            "brightRed": "#EF5350",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FFEB95",
-            "cyan": "#21C7A8",
-            "foreground": "#D6DEEB",
-            "green": "#22DA6E",
-            "name": "Night Owl",
-            "purple": "#C792EA",
-            "red": "#EF5350",
-            "white": "#FFFFFF",
-            "yellow": "#ADDB67"
-        },
-        {
-            "name": "Monokai Seti Dark",
-            "foreground": "#F8F8F2",
-            "background": "#151718",
-            "black": "#151718",
-            "brightBlack": "#625e4c",
-            "blue": "#9D65FF",
-            "brightBlue": "#9D65FF",
-            "cyan": "#58D1EB",
-            "brightCyan": "#58D1EB",
-            "green": "#98F424",
-            "brightGreen": "#98F424",
-            "purple": "#F4005F",
-            "brightPurple": "#F4005F",
-            "red": "#F4005F",
-            "brightRed": "#F4005F",
-            "white": "#F8F8F2",
-            "brightWhite": "#f6f6ef",
-            "yellow": "#FA8419",
-            "brightYellow": "#FA8419"
+            "name": "Aurelia",
+            "background": "#1a1a1a",
+            "black": "#000000",
+            "blue": "#579BD5",
+            "brightBlack": "#797979",
+            "brightBlue": "#9CDCFE",
+            "brightCyan": "#2BC4E2",
+            "brightGreen": "#1AD69C",
+            "brightPurple": "#975EAB",
+            "brightRed": "#EB2A88",
+            "brightWhite": "#EAEAEA",
+            "brightYellow": "#e9ad95",
+            "cyan": "#00B6D6",
+            "foreground": "#EA549F",
+            "green": "#4EC9B0",
+            "purple": "#714896",
+            "red": "#E92888",
+            "white": "#EAEAEA",
+            "yellow": "#CE9178"
         }
     ],
     // Add custom keybindings to this array.
