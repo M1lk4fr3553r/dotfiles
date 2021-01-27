@@ -4,5 +4,7 @@
   all = "!find . -type d -name .git -prune -execdir pwd ';' -execdir git $@ ';' #"
   undo = reset HEAD~1 --mixed
 [user]
-	name = Tobias Birth
-	email = t.birth@serrala.com
+  name = Tobias Birth
+  email = t.birth@serrala.com
+[commit]
+  gpgsign = true
