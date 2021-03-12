@@ -1,4 +1,10 @@
+# Make sure sessions start at the DEV Cluster
+kubectl config use-context cashapp-testing
+
 # Tools
+alias cluster="az aks list -o table"
+alias sales="kubectl config use-context Cashapp-Sales"
+alias dev="kubectl config use-context cashapp-testing"
 alias k="kubectl"
 alias kns="kubens"
 alias d="docker"
@@ -13,6 +19,15 @@ $HOME/.local/bin/gpg-agent-relay start
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 # Git
+function nsync() {
+  cd /mnt/c/Users/t.birth/git/joplin
+  git add -A
+  git commit -m "sync from $HOST"
+  git push
+  git pull
+  cd -
+}
+
 function start-work() {
   git checkout "$1"
   git pull --rebase
@@ -21,7 +36,14 @@ function start-work() {
 }
 
 function end-work() {
-  git push -o merge_request.create -o merge_request.remove_source_branch -o merge_request.target="$1" --set-upstream origin $(git branch --show-current)
+  current_branch=$(git branch --show-current)
+  git push -o merge_request.create -o merge_request.remove_source_branch -o merge_request.target="$1" --set-upstream origin "${current_branch}"
+  git checkout "$1"
+  git branch -d "${current_branch}"
+}
+
+function update-gitlab() {
+gitlabber -t "$GITLAB_TOKEN" -u 'http://hogit.hanseorga-ag.de/' -m ssh -i '/Alevate CashApp/Backend/**,/Alevate CashApp/Contracts/**,/Alevate CashApp/DevInternal/**,/Alevate CashApp/Frontend/**,/Alevate CashApp/Libraries/**,/Java Developers BPI_CE_JCO_REST/test**,/Java Developers BPI_CE_JCO_REST/bpi**,/Java Developers BPI_CE_JCO_REST/BPI**,/Java Developers BPI_CE_JCO_REST/CE**,/Java Developers BPI_CE_JCO_REST/ce**' /mnt/c/Users/t.birth/git/GitLab
 }
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
