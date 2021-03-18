@@ -1,0 +1,10 @@
+#!/bin/bash
+
+alias cluster="az aks list -o table"
+alias sales="kubectl config use-context Cashapp-Sales"
+alias staging="kubectl config use-context cashapp-staging-aweu"
+alias dev="kubectl config use-context cashapp-testing"
+alias k="kubectl"
+alias kns="kubens"
+alias d="docker"
+alias dc="docker-compose"

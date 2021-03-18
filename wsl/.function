@@ -1,0 +1,32 @@
+#!/bin/bash
+
+function postgres() {
+  docker run -p "${1:-5432}:5432" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres:latest
+}
+
+function delete-all-pods() {
+  kubectl get pods --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | xargs k delete pod
+}
+
+function nsync() {
+  cd /mnt/c/Users/t.birth/git/joplin
+  git add -A
+  git commit -m "sync from $HOST"
+  git push
+  git pull
+  cd -
+}
+
+function start-work() {
+  git checkout "$1"
+  git pull --rebase
+  git branch "$2"
+  git checkout "$2"
+}
+
+function end-work() {
+  current_branch=$(git branch --show-current)
+  git push -o merge_request.create -o merge_request.remove_source_branch -o merge_request.target="$1" --set-upstream origin "${current_branch}"
+  git checkout "$1"
+  git branch -d "${current_branch}"
+}
