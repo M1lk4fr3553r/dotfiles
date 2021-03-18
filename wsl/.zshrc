@@ -4,6 +4,7 @@ kubectl config use-context cashapp-testing
 # Tools
 alias cluster="az aks list -o table"
 alias sales="kubectl config use-context Cashapp-Sales"
+alias staging="kubectl config use-context cashapp-staging-aweu"
 alias dev="kubectl config use-context cashapp-testing"
 alias k="kubectl"
 alias kns="kubens"
@@ -19,6 +20,14 @@ $HOME/.local/bin/gpg-agent-relay start
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
 # Git
+function postgres() {
+  docker run -p "${1:-5432}:5432" -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres:latest
+}
+
+function delete-all-pods() {
+  kubectl get pods --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | xargs k delete pod
+}
+
 function nsync() {
   cd /mnt/c/Users/t.birth/git/joplin
   git add -A
@@ -43,7 +52,7 @@ function end-work() {
 }
 
 function update-gitlab() {
-gitlabber -t "$GITLAB_TOKEN" -u 'http://hogit.hanseorga-ag.de/' -m ssh -i '/Alevate CashApp/Backend/**,/Alevate CashApp/Contracts/**,/Alevate CashApp/DevInternal/**,/Alevate CashApp/Frontend/**,/Alevate CashApp/Libraries/**,/Java Developers BPI_CE_JCO_REST/test**,/Java Developers BPI_CE_JCO_REST/bpi**,/Java Developers BPI_CE_JCO_REST/BPI**,/Java Developers BPI_CE_JCO_REST/CE**,/Java Developers BPI_CE_JCO_REST/ce**' /mnt/c/Users/t.birth/git/GitLab
+gitlabber -t "$GITLAB_TOKEN" -u 'http://hogit.hanseorga-ag.de/' -m ssh -i '/Alevate CashApp/Backend/**,/Alevate CashApp/Contracts/**,/Alevate CashApp/DevInternal/**,/Alevate CashApp/Mocks/**,/**/Alevate CashApp/Frontend/**,/Alevate CashApp/Libraries/**,/Java Developers BPI_CE_JCO_REST/test**,/Java Developers BPI_CE_JCO_REST/bpi**,/Java Developers BPI_CE_JCO_REST/BPI**,/Java Developers BPI_CE_JCO_REST/CE**,/Java Developers BPI_CE_JCO_REST/ce**' /mnt/c/Users/t.birth/git/GitLab
 }
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
