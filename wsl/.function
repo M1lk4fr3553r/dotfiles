@@ -5,7 +5,7 @@ function postgres() {
 }
 
 function delete-all-pods() {
-  kubectl get pods --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | xargs k delete pod
+  kubectl get pods --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | xargs kubectl delete pod
 }
 
 function nsync() {

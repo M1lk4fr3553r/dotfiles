@@ -121,10 +121,10 @@
             },
             "keys": "ctrl+c"
         },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
+//        {
+//            "command": "paste",
+//            "keys": "ctrl+v"
+//        },
         // Press Ctrl+Shift+F to open the search box
         {
             "command": "find",

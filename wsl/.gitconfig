@@ -8,3 +8,5 @@
   email = t.birth@serrala.com
 [commit]
   gpgsign = true
+[push]
+	default = current
