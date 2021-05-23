@@ -5,7 +5,7 @@
   undo = reset HEAD~1 --mixed
 [user]
   name = Tobias Birth
-  email = t.birth@serrala.com
+  email = tobias.birth@live.de
 [commit]
   gpgsign = true
 [push]
